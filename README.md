@@ -21,7 +21,28 @@ Every question a user has has been asked before — and most will be asked again
 The platform is the operator. People handle exceptions, not the steady state.
 
 ---
+## 📱 Offline Mode (PWA)
 
+The CSFAQ frontend supports Offline Mode through Progressive Web App (PWA) technology.
+
+### Features
+
+- View previously visited FAQ pages without an internet connection.
+- Install the application on desktop and mobile devices.
+- Cached FAQ list for faster loading.
+- Powered by a Service Worker.
+- Controlled using the `offlineMode` feature flag.
+
+### Enable Offline Mode
+
+Enable the `offlineMode` feature flag before running the application.
+
+After enabling:
+
+1. Start the frontend.
+2. Open the application in a supported browser.
+3. Install the PWA if prompted.
+4. Previously visited FAQ pages will remain available even when offline.
 ## About
 
 Samagama (internally "Yaksha FAQ Portal") turns an organisation's accumulated conversations into a searchable, self-maintaining FAQ. It combines hybrid vector + keyword search with a community Q&A board and a fully automated ingestion pipeline that pulls transcripts from Zoom, extracts Q&A with AI, and indexes them for retrieval in seconds.
