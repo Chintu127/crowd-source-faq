@@ -52,7 +52,6 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 | Infra | Sentry, Ngrok (webhook dev tunnel), Twilio (SMS), SMTP, Helmet, express-rate-limit, JWT, bcryptjs |
 
 ---
-
 ## Recent changes (v1.68)
 
 - **Embedding model swap**: `Xenova/multi-qa-mpnet-base-dot-v1` (768-dim) → `mixedbread-ai/mxbai-embed-large-v1` (1024-dim, SOTA MTEB 64.68). Now routed through the HuggingFace Inference API when `HUGGINGFACE_API_KEY` is set, with a fall-back to the in-process ONNX pipeline. The retrieval-tuned query prompt (`Represent this sentence for searching relevant passages:`) is auto-prepended for queries via `generateQueryEmbedding()`.
@@ -62,7 +61,6 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 - **Live-data seed** — `npm run seed:live` populates 20 community posts, 8 support tickets, 2 zoom meetings, badge awards, search logs, and a populated leaderboard. Idempotent.
 
 ---
-
 ## Reference docs
 
 | Topic | File |
@@ -87,7 +85,6 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 | License | [`LICENSE`](LICENSE) |
 
 ---
-
 ## Useful npm scripts (backend)
 
 | Script | What it does |
@@ -111,3 +108,6 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 - GitHub: https://github.com/vicharanashala/crowd-source-faq
 - License: see [`LICENSE`](LICENSE)
 - Branch: `main` (active), with `MCSFAQ/main-v2` for the next iteration
+
+
+

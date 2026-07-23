@@ -151,9 +151,7 @@ Crowd Source FAQ/
 ├── docs/              # Full documentation      
 └── run.sh             # Local dev runner (env setup, ngrok, backend + frontend)
 ```
-
 ---
-
 ## Environment Variables
 
 Required: `MONGODB_URI`, `JWT_SECRET`
@@ -162,7 +160,9 @@ Optional: at least one AI provider key (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY` /
 See [docs/ARCHITECTURE.md#10-env-variables-reference](docs/ARCHITECTURE.md#10-env-variables-reference) for the full list.
 
 ---
-
 ## License
 
 [MIT](./LICENSE) © 2026 vicharanashala
+
+
+
