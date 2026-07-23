@@ -106,4 +106,3 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 - License: see [`LICENSE`](LICENSE)
 - Branch: `main` (active), with `MCSFAQ/main-v2` for the next iteration
 
-
