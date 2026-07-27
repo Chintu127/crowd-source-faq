@@ -4,13 +4,10 @@ Full-stack FAQ portal with semantic vector search, AI-powered community moderati
 
 GitHub: https://github.com/vicharanashala/crowd-source-faq
 Full reference: [`docs/`](docs/README.md) · [Contributing](./CONTRIBUTING.md) · [Code of Conduct](./CODE_OF_CONDUCT.md) · [License](./LICENSE)
-
 ---
 ## Vision
 **Automate the FAQ lifecycle end-to-end. Zero people in the loop. Reduce the operational FAQ culture.**
-
 Every question a user has has been asked before — and most will be asked again. The right answer should be there before the user finishes typing. The platform achieves this through four zero-touch pillars:
-
 - **Zero-touch ingestion** — Zoom meetings, webhooks, and manual uploads feed the knowledge base without human scheduling, categorising, or approval.
 - **Zero-touch answering** — A 24-hour scheduler matches unanswered posts against the knowledge base; high-confidence matches auto-post, low-confidence escalate to humans.
 - **Zero-touch quality control** — Approved FAQs are re-evaluated every 6 hours; drift, contradictions, and staleness are detected and flagged automatically.
@@ -116,6 +113,8 @@ The admin panel at `/admin` (mounted at `/api/admin/*`) provides telemetry, mode
 
 For the full admin route map and per-page behaviour, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
+
+
 ---
 ## User Experience
 
@@ -129,6 +128,7 @@ The user-facing app (`/`, `/faq`, `/community`, `/saved`, `/account`, `/leaderbo
 - **AI assistant** — RAG-powered `/ask-ai` (5/day anonymous quota via localStorage, unlimited for authenticated users), sources cited, **accepts file and image attachments (max 4 files, 10 MB each) — images sent as vision input, text files inlined into the prompt**
 - **Zoom integration** — per-user OAuth from `/account`, manual `.vtt` / `.txt` / raw-text upload, last-synced status card, no admin required
 - **Search feedback** — "Report missing FAQ" on zero results, admin-promotable to FAQ
+
 
 For per-route behaviour and field schemas, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -151,7 +151,7 @@ Optional: at least one AI provider key (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY` /
 
 See [docs/ARCHITECTURE.md#10-env-variables-reference](docs/ARCHITECTURE.md#10-env-variables-reference) for the full list.
 
----
+
 ## License
 
 [MIT](./LICENSE) © 2026 vicharanashala

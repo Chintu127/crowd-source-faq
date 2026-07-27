@@ -13,12 +13,16 @@ Four zero-touch pillars, in order of automation:
 3. **Quality** — Approved FAQs are re-evaluated every 6h for drift, contradictions, and staleness. Drift is auto-flagged.
 4. **Lifecycle** — User deletion is anonymisation, not destruction. Reputation, attribution, and audit history persist.
 - **Real-time observability** — tagged colored logs (`[ INFO ] [ cron ]` etc.), Discord ALERT webhook, optional Sentry.
+
 ---
 ---
+
 ## Offline Mode
 
 The application supports Progressive Web App (PWA) functionality to improve usability when internet connectivity is unavailable.
+
 ### Features
+
 - Displays an offline banner when the user loses internet connectivity.
 - Allows access to previously cached FAQ pages.
 - Provides a Retry button to refresh the application when the network is restored.
@@ -105,4 +109,5 @@ The application supports Progressive Web App (PWA) functionality to improve usab
 - GitHub: https://github.com/vicharanashala/crowd-source-faq
 - License: see [`LICENSE`](LICENSE)
 - Branch: `main` (active), with `MCSFAQ/main-v2` for the next iteration
+
 
