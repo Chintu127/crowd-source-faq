@@ -15,7 +15,28 @@ Every question a user has has been asked before — and most will be asked again
 
 The platform is the operator. People handle exceptions, not the steady state.
 ---
+## 📱 Offline Mode (PWA)
 
+The CSFAQ frontend supports Offline Mode through Progressive Web App (PWA) technology.
+
+### Features
+
+- View previously visited FAQ pages without an internet connection.
+- Install the application on desktop and mobile devices.
+- Cached FAQ list for faster loading.
+- Powered by a Service Worker.
+- Controlled using the `offlineMode` feature flag.
+
+### Enable Offline Mode
+
+Enable the `offlineMode` feature flag before running the application.
+
+After enabling:
+
+1. Start the frontend.
+2. Open the application in a supported browser.
+3. Install the PWA if prompted.
+4. Previously visited FAQ pages will remain available even when offline.
 ## About
 
 Samagama (internally "Yaksha FAQ Portal") turns an organisation's accumulated conversations into a searchable, self-maintaining FAQ. It combines hybrid vector + keyword search with a community Q&A board and a fully automated ingestion pipeline that pulls transcripts from Zoom, extracts Q&A with AI, and indexes them for retrieval in seconds.
@@ -62,7 +83,25 @@ Eight flagship capabilities define this platform:
 Other capabilities: semantic hybrid search, community Q&A board, reputation system + badges + leaderboard, SpillTheTea event-driven notifications, per-user Zoom OAuth, RAG-powered `/ask-ai` assistant with image + file attachments, soft user lifecycle, experimental feature flags, support tickets (troubleshoot → admin triage → resolution).
 
 ---
+---
 
+# Offline Mode (PWA)
+
+The Crowd Source FAQ portal supports Progressive Web App (PWA) functionality to improve usability during network interruptions.
+
+## Features
+
+- Displays an offline banner when internet connectivity is lost.
+- Allows users to continue browsing previously cached FAQ pages.
+- Provides a Retry button to refresh content after reconnecting.
+- Caches important frontend assets for faster loading.
+- Automatically restores the latest data once the network becomes available.
+
+## Benefits
+
+- Better experience for users with unstable internet.
+- Faster page loading using cached resources.
+- Improved accessibility in low-connectivity environments.
 ## Admin Dashboard
 
 The admin panel at `/admin` (mounted at `/api/admin/*`) provides telemetry, moderation, and operational control. Key areas:
@@ -104,17 +143,13 @@ Crowd Source FAQ/
 ├── docs/              # Full documentation      
 └── run.sh             # Local dev runner (env setup, ngrok, backend + frontend)
 ```
-
 ---
-
 ## Environment Variables
 
 Required: `MONGODB_URI`, `JWT_SECRET`
 Optional: at least one AI provider key (`ANTHROPIC_API_KEY` / `OPENAI_API_KEY` / `XAI_API_KEY` / `MINIMAX_API_KEY`), Zoom OAuth credentials, `CLOUDINARY_*`, `SENTRY_DSN`, Twilio + SMTP for notifications, `UPSTASH_REDIS_*`
 
 See [docs/ARCHITECTURE.md#10-env-variables-reference](docs/ARCHITECTURE.md#10-env-variables-reference) for the full list.
-
----
 
 
 ## License
